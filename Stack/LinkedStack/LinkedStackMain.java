@@ -1,4 +1,4 @@
-public class main{
+public class LinkedStackMain{
     public static void main(String[] args){
         LinkedStack<Integer> stack = new LinkedStack<Integer>();
         System.out.println("Entered into the stack is 1,2,3,4.");
