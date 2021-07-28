@@ -52,13 +52,7 @@ public class LinkedStack<T>
             tempNode = tempNode.getNext();
         }
     }
-
-
-
-
-
-
-
+    
     //Node class
 
     private class Node{
