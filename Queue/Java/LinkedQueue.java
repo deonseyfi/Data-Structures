@@ -32,18 +32,20 @@ public class LinkedQueue<T>{
             lastNode = null;
         return front;
     }
+    //O(1) time complexity
     public T getFront(){
         if(isEmpty())
             throw new EmptyStackException();
         else
             return firstNode.getData();
     }
+    //O(1) time complexity
     public void clear(){
         firstNode = null;
         lastNode = null;
     }
 
-
+    //O(n) time complexity
     public void printQueue(){
         if(isEmpty())
             System.out.println("The Queue is Emtpy");
