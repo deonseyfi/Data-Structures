@@ -14,6 +14,7 @@ class Stack:
                 return
             temp = self.top.data
             self.top = self.top.next
+            self.size -= 1
             return temp
     def push(self,data):
             self.top = Node(data,self.top)
@@ -47,11 +48,20 @@ if __name__ == "__main__":
     stack.peek()
     for i in range(10):
         stack.push(i)
+    print("Print Stack")
     stack.print_stack()
-    print(stack.length())
-    print(stack.peek())
+    print("Stack Length: "+str(stack.length()))
+    print("Stack Peek: "+str(stack.peek()))
+    print("Stack Pop Value: "+ str(stack.pop()))
+    print("Stack Pop Value: "+ str(stack.pop()))
+    print("Stack Length: "+str(stack.length()))
+    print("Print Stack")
+    stack.print_stack()
+    print("Stack Clear")
     stack.clear()
-    print(stack.length())
+    print("Stack Length: "+str(stack.length()))
     stack.peek()
     stack.pop()
+    print("Print Stack")
     stack.print_stack()
+
