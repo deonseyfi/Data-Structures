@@ -59,10 +59,15 @@ class WeightedGraph:
         self.graph.clear()
         return
 
+    # O(k) where k = the number of verticies within the graph.
+    # Gets the count of all the edges within the graph.
+    def get_edge_count(self):
+        return sum([len(self.graph[i]) for i in self.graph])
 if __name__ == "__main__":
     graph = WeightedGraph()
 
     print(graph)
+    print(graph.get_edge_count())
     graph.add(1,2,5)
     graph.add(1,3,3)
     graph.add(2,3,4)
@@ -76,7 +81,9 @@ if __name__ == "__main__":
     print(graph.has_edge(4,1))
     print(graph.has_edge(3,2))
     print(graph.has_edge(1,2))
+    print(graph.get_edge_count())
     graph.clear()
     print(graph)
     graph.add(1,2,5)
     print(graph)
+    print(graph.get_edge_count())
