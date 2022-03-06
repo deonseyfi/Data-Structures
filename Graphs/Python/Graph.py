@@ -13,6 +13,11 @@ We do not use a list of lists because when accessing a node, we do not want to t
 Its limitations is that we are restricted to one route from Node A to Node B. You can not have multiple routes from Node A to Node B.
 
 You are allowed to have a Node to point to itself.
+
+You may consider the implementation of a dictionary of lists that stores tuples where the tuple is (value, weight)
+The draw back of this is where you are trying to find the NodeA and NodeB connection. You will be given a time complexity of O(k).
+Where k equals all the connects Nodes to Node A.
+In this implementation you are allowed to have multiple edges from NodeA to NodeB.
 """
 class WeightedGraph:
     def __init__(self):
